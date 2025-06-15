@@ -1,11 +1,13 @@
 import "./App.css";
-import Home from "./pages";
+import Homepage from "./pages";
 
 function App() {
+  const value = false;
   return (
-    <>
-      <Home />
-    </>
+    <div className='App'>
+      {value ? "Benar" : "Salah"}
+      <Homepage />
+    </div>
   );
 }
 

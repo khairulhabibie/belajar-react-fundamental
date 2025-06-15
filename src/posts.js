@@ -1,17 +1,20 @@
 export default [
   {
     title: "Tutorial belajar react lengkap",
-    date: "2025-06-15",
     tags: ["react", "frontend"],
+    date: "2025-06-15",
+    isNew: true,
   },
   {
     title: "Meningkatkan performa reacjs",
-    date: "2025-06-16",
     tags: ["react", "frontend"],
+    date: "2025-06-16",
+    isNew: false,
   },
   {
     title: "Cara menggunakan cakra ui di react js",
-    date: "2025-06-17",
     tags: ["react", "css"],
+    date: "2025-06-17",
+    isNew: false,
   },
 ];

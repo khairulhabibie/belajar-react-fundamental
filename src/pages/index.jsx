@@ -1,24 +1,26 @@
 import postsData from "../posts";
 import Article from "../components/Article";
-import Search from "../components/Input";
+import Search from "../components/Search";
 import { useState } from "react";
 
-function Home() {
+function Homepage() {
   const [posts, setPosts] = useState(postsData);
+  const [totalPosts, setTotalPosts] = useState(0);
   const onSearchChange = (value) => {
     // console.log(value);
     const filterPost = posts.filter((post) => post.title.includes(value));
     setPosts(filterPost);
+    setTotalPosts(filterPost.length);
   };
   return (
     <>
       <h1>Simple Blog</h1>
-      <Search onSearchChange={onSearchChange} />
-      {posts.map(({ title, date, tags }, index) => (
-        <Article {...{ title, date, tags }} key={index} />
+      <Search onSearchChange={onSearchChange} totalPosts={totalPosts} />
+      {posts.map((props, index) => (
+        <Article {...props} key={index} />
       ))}
     </>
   );
 }
 
-export default Home;
+export default Homepage;
