@@ -5,9 +5,8 @@ import { useState } from "react";
 
 function Homepage() {
   const [posts, setPosts] = useState(postsData);
-  const [totalPosts, setTotalPosts] = useState(0);
+  const [totalPosts, setTotalPosts] = useState();
   const onSearchChange = (value) => {
-    // console.log(value);
     const filterPost = posts.filter((post) => post.title.includes(value));
     setPosts(filterPost);
     setTotalPosts(filterPost.length);
