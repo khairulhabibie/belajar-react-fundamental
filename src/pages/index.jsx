@@ -1,7 +1,7 @@
 import postsData from "../posts";
 import Article from "../components/Article";
 import Search from "../components/Search";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Homepage() {
   const [posts, setPosts] = useState(postsData);
@@ -11,6 +11,13 @@ function Homepage() {
     setPosts(filterPost);
     setTotalPosts(filterPost.length);
   };
+
+  useEffect(() => {
+    console.log("hello world!");
+    return () => {
+      console.log("cleanup");
+    };
+  }, []);
   return (
     <>
       <h1>Simple Blog</h1>

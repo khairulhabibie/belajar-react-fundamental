@@ -8,7 +8,7 @@ function Search(props) {
   };
 
   const handleKeyDown = (e) => {
-    console.log(e);
+    // console.log(e);
     if (e.key === "Enter") {
       props.onSearchChange(search);
     }
